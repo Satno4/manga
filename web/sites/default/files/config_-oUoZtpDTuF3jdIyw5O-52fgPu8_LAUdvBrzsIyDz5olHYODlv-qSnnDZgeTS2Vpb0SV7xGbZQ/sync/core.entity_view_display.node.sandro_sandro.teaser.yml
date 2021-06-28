@@ -1,0 +1,30 @@
+uuid: bc24db6d-7375-4482-b303-ec891c2df0a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.sandro_sandro.body
+    - node.type.sandro_sandro
+  module:
+    - text
+    - user
+id: node.sandro_sandro.teaser
+targetEntityType: node
+bundle: sandro_sandro
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

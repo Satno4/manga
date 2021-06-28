@@ -1,0 +1,28 @@
+uuid: bbaf4e74-65e0-4951-b9a9-c59d5839420c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.sandro_sandro.body
+    - node.type.sandro_sandro
+  module:
+    - text
+    - user
+id: node.sandro_sandro.default
+targetEntityType: node
+bundle: sandro_sandro
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }
