@@ -1,0 +1,62 @@
+<?php
+
+function anime_preprocess_node(&$variables){
+
+    //types "animated_series", "voice_actor"
+
+    if($variables['node']->getType() === 'mangaka') {
+        $mangaka_id = $variables['node']->id();
+        $variables['works'] = [];
+        $entity_storage = \Drupal::entityTypeManager()->getStorage('node');
+        $manga_ids = $entity_storage->getQuery()->condition('type', 'manga')->condition('status','1')->condition('field_author', $mangaka_id)->execute();
+        // dump($manga_ids);
+
+        $mangas = \Drupal\node\Entity\Node::loadMultiple($manga_ids);
+        foreach ($mangas as $manga){
+            $variables['works'][] = [
+                '#work_title' => $manga->get('title')->getString(),
+                '#work_poster' => file_create_url($manga->get('field_poster')->entity->getFileUri()),
+                '#work_rating' => $manga->get('field_star')->getString(),
+                '#work_link' => $manga->toUrl()->toString()
+            ];
+        }
+    } else if ($variables['node']->getType() === 'manga'){
+        $manga_id = $variables['node']->id();
+        $variables['characters'] = [];
+        $entity_storage = \Drupal::entityTypeManager()->getStorage('node');
+
+        $character_ids = $entity_storage->getQuery()->condition('type', 'character')->condition('status', '1')->condition('field_manga', $manga_id)->execute();
+        
+        $characters = \Drupal\node\Entity\Node::loadMultiple($character_ids);
+
+        foreach ($characters as $character){
+
+            $variables['characters'][] = [
+                '#character_name' => $character->get('title')->getString(),
+                '#character_poster' => file_create_url($character->get('field_poster')->entity->getFileUri()),
+                '#character_link' => $character->toUrl()->toString()
+            ];
+        }
+    } else if ($variables['node']->getType() === 'character'){
+        $original_id = $variables['node']->id();
+        $variables['other_characters'] = [];
+        $entity_storage = \Drupal::entityTypeManager()->getStorage('node');
+        $character = \Drupal\node\Entity\Node::load($original_id);
+        $manga_id = $character->get('field_manga')->entity;
+
+
+        $character_ids = $entity_storage->getQuery()->condition('type', 'character')->condition('status', '1')->condition('field_manga', $manga_id->id())->execute();
+
+        $characters = \Drupal\node\Entity\Node::loadMultiple($character_ids);
+
+        foreach ($characters as $character){
+            if($character->id() != $original_id){
+                $variables['other_characters'][] = [
+                    '#character_name' => $character->get('title')->getString(),
+                    '#character_poster' => file_create_url($character->get('field_poster')->entity->getFileUri()),
+                    '#character_link' => $character->toUrl()->toString()
+                ];
+            }
+        }
+    }
+}

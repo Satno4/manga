@@ -1,0 +1,126 @@
+/* HEADER - MAIN MENU / ACCOUNT MENU */
+
+.menu-casual li{
+  background: white !important;
+  color: black !important;
+  padding: 6px 10px !important;
+  border-radius: 5px;
+  border: 2px solid black;
+  font-size: 1.2rem;
+  margin-bottom: 26px;
+}
+
+.menu-casual li:hover, .menu-casual a:hover {
+  background-color: black !important;
+  color: white !important;
+}
+
+.right-lean {
+  float: right;
+  display: inline;
+}
+
+.left-lean {
+  float: left;
+  display: inline;
+}
+
+/* HEADER - BRANDING */
+
+.region-header .brandhead{
+  display: block;
+  text-align: center;
+}
+
+#header {
+  background: black !important;
+}
+
+.site-branding__name {
+  font-size: 2.4rem !important;
+  letter-spacing: 5px;
+  position: relative;
+  top: 32px;
+}
+
+.site-branding__logo {
+  width: 150px;
+  height: 150px;
+  margin-left: 160px;
+}
+
+footer {
+  background-color: black !important;
+}
+
+body {
+  font-family: sans-serif;
+  color: #616161;
+}
+
+#header,
+.sidebar {
+  background-color: black;
+  background-image: none;
+}
+
+.myman {
+  color: white;
+}
+
+.collab {
+  width: 100%;
+  text-align: center;
+  color: gray;
+}
+
+/* MANGAKA */
+
+.info-center {
+  width: 100%;
+  text-align: center;
+  border-bottom: black solid 4px;
+}
+
+.info-center img, .teaser-character-logo {
+  height: 360px;
+  width: auto;
+  border-radius: 25%;
+}
+
+.character-cell {
+  display: inline-block;
+  text-align: center;
+}
+
+.character-cell img{
+  max-width: 240px;
+  object-fit: contain;
+}
+
+.page-title {
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+}
+
+div.clearfix.region.region-header {
+  text-align: center !important;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.info-center .field__item img, .teaser-manga-logo {
+  max-width: 400px;
+  height: auto;
+  margin: 12px;
+}
+
+.work-cell {
+  display: inline-block;
+  text-align: center;
+}
+
