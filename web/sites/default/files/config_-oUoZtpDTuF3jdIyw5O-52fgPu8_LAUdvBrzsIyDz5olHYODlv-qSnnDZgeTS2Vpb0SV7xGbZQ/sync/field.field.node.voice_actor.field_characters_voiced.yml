@@ -1,0 +1,29 @@
+uuid: 0264f21e-e696-42be-82e0-36b1f25d4eb1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_characters_voiced
+    - node.type.character
+    - node.type.voice_actor
+id: node.voice_actor.field_characters_voiced
+field_name: field_characters_voiced
+entity_type: node
+bundle: voice_actor
+label: 'Characters Voiced'
+description: 'Which characters has this voice actor voiced'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      character: character
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

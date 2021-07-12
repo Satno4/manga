@@ -1,0 +1,28 @@
+uuid: ff327a24-04e4-4099-91fd-59f0e0cea26d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: content_label
+label: 'Content Label'
+type: 'canonical_entities:node'
+pattern: '[node:content-type]/[node:nid]'
+selection_criteria:
+  354945fc-1ae6-495c-8f5b-fbbdd39f7ffb:
+    id: node_type
+    bundles:
+      animated_series: animated_series
+      character: character
+      director: director
+      manga: manga
+      mangaka: mangaka
+      publishing_house: publishing_house
+      voice_actor: voice_actor
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 354945fc-1ae6-495c-8f5b-fbbdd39f7ffb
+selection_logic: and
+weight: -5
+relationships: {  }

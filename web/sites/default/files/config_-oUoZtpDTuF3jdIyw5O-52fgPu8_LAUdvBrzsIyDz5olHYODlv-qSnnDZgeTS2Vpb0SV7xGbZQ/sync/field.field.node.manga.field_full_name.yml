@@ -1,0 +1,21 @@
+uuid: 32fe7e42-7d09-4220-9015-467a2e8af449
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_full_name
+    - node.type.manga
+  module:
+    - text
+id: node.manga.field_full_name
+field_name: field_full_name
+entity_type: node
+bundle: manga
+label: 'Full Name'
+description: 'The full name of the manga'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

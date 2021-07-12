@@ -1,0 +1,31 @@
+uuid: a202ed2b-6035-4b8b-ad72-1c13848ffef8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_appears_in
+    - node.type.animated_series
+    - node.type.character
+    - node.type.manga
+id: node.character.field_appears_in
+field_name: field_appears_in
+entity_type: node
+bundle: character
+label: 'Appears In'
+description: 'The Manga Series where the character appears'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      animated_series: animated_series
+      manga: manga
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: true
+    auto_create_bundle: animated_series
+field_type: entity_reference

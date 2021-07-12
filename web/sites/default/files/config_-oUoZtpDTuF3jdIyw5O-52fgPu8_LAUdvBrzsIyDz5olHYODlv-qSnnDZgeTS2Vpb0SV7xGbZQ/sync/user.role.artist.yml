@@ -1,0 +1,17 @@
+uuid: 7c92c156-5298-4828-b384-9f6afb547266
+langcode: en
+status: true
+dependencies: {  }
+id: artist
+label: Author
+weight: 4
+is_admin: null
+permissions:
+  - 'create author_s_notes content'
+  - 'delete any author_s_notes content'
+  - 'delete author_s_notes revisions'
+  - 'delete own author_s_notes content'
+  - 'edit any author_s_notes content'
+  - 'edit own author_s_notes content'
+  - 'revert author_s_notes revisions'
+  - 'view author_s_notes revisions'

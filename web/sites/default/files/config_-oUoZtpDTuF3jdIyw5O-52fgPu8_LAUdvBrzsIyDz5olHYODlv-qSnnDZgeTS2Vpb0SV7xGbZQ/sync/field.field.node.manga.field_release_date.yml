@@ -1,0 +1,21 @@
+uuid: df0d1825-f512-4bbd-aa4d-ab5c210e2876
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_release_date
+    - node.type.manga
+  module:
+    - datetime
+id: node.manga.field_release_date
+field_name: field_release_date
+entity_type: node
+bundle: manga
+label: 'Release Date'
+description: 'When was the first issue released'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

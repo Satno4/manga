@@ -1,0 +1,19 @@
+uuid: 654c5293-343f-4f4e-9b69-acbbfa38b17d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_manga_referenced
+field_name: field_manga_referenced
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

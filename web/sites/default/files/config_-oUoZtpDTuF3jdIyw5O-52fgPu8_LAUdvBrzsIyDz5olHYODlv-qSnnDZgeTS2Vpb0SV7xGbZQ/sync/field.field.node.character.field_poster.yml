@@ -1,0 +1,38 @@
+uuid: c1882ee2-87a8-4b80-8032-c2759daaeedd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_poster
+    - node.type.character
+  module:
+    - image
+id: node.character.field_poster
+field_name: field_poster
+entity_type: node
+bundle: character
+label: Picture
+description: 'Picture of the character'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: '10 MB'
+  max_resolution: ''
+  min_resolution: 400x400
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: b86eed81-5f45-416b-a818-c75846ad29a5
+    alt: generic_picture
+    title: ''
+    width: 446
+    height: 446
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

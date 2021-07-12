@@ -1,0 +1,23 @@
+uuid: 1e7e257e-8f62-4cb3-a70c-3421bcc99bdf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.animated_series
+  module:
+    - text
+id: node.animated_series.body
+field_name: body
+entity_type: node
+bundle: animated_series
+label: 'Plot Summary'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

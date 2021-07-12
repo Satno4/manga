@@ -1,0 +1,36 @@
+uuid: c0e9aee2-13dc-4d2c-aa17-063503e6c31a
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.mangaka_answer
+    - field.field.comment.mangaka_answer.comment_body
+  module:
+    - text
+id: comment.mangaka_answer.default
+targetEntityType: comment
+bundle: mangaka_answer
+mode: default
+content:
+  author:
+    weight: -2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  comment_body:
+    type: text_textarea
+    weight: 11
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  subject:
+    type: string_textfield
+    weight: 10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

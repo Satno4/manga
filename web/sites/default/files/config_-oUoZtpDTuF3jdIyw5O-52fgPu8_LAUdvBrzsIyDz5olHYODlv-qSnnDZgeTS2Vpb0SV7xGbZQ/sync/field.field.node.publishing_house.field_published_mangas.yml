@@ -1,0 +1,29 @@
+uuid: 0cf1b908-e268-4ecc-b913-6d9d1108aeb9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_published_mangas
+    - node.type.manga
+    - node.type.publishing_house
+id: node.publishing_house.field_published_mangas
+field_name: field_published_mangas
+entity_type: node
+bundle: publishing_house
+label: 'Published Mangas'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      manga: manga
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

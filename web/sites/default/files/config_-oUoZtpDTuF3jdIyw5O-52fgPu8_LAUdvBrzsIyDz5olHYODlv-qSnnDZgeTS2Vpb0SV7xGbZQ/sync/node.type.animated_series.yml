@@ -1,0 +1,18 @@
+uuid: 6690f3ec-d8be-4a83-8f56-168cf1b251b3
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Animated Adaptation'
+type: animated_series
+description: 'The animated adaptation of the manga'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,45 @@
+uuid: 607658f3-bc06-452e-8743-773a67741419
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.manga.field_author
+    - field.field.node.manga.field_author_s_notes
+    - field.field.node.manga.field_full_name
+    - field.field.node.manga.field_genre
+    - field.field.node.manga.field_number_of_issues
+    - field.field.node.manga.field_plot_details
+    - field.field.node.manga.field_poster
+    - field.field.node.manga.field_release_date
+    - field.field.node.manga.field_star
+    - field.field.node.manga.field_status
+    - node.type.manga
+  module:
+    - image
+    - user
+id: node.manga.teaser
+targetEntityType: node
+bundle: manga
+mode: teaser
+content:
+  field_poster:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: content
+    third_party_settings: {  }
+hidden:
+  field_author: true
+  field_author_s_notes: true
+  field_full_name: true
+  field_genre: true
+  field_number_of_issues: true
+  field_plot_details: true
+  field_release_date: true
+  field_star: true
+  field_status: true
+  links: true

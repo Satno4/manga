@@ -1,0 +1,30 @@
+uuid: f7ffea6b-059b-4153-a82d-9fcf12849a45
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.author_s_notes
+  module:
+    - system
+    - views
+  theme:
+    - bartik
+id: views_block__author_s_notes_block_1
+theme: bartik
+region: featured_bottom_first
+weight: 0
+provider: null
+plugin: 'views_block:author_s_notes-block_1'
+settings:
+  id: 'views_block:author_s_notes-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '/manga/*'
+    negate: false

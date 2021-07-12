@@ -1,0 +1,31 @@
+uuid: 568eee68-b0f7-4c76-bf17-478a225168de
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.voice_actor.body
+    - field.field.node.voice_actor.field_characters_voiced
+    - field.field.node.voice_actor.field_poster
+    - node.type.voice_actor
+  module:
+    - image
+    - user
+id: node.voice_actor.teaser
+targetEntityType: node
+bundle: voice_actor
+mode: teaser
+content:
+  field_poster:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: content
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_characters_voiced: true
+  links: true

@@ -1,0 +1,21 @@
+uuid: d1b3b6cf-3882-41a4-bcf9-6a1a50c1b0af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_series_name
+    - node.type.animated_series
+  module:
+    - text
+id: node.animated_series.field_series_name
+field_name: field_series_name
+entity_type: node
+bundle: animated_series
+label: 'Series Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

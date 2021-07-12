@@ -1,0 +1,38 @@
+uuid: ee4dff56-87f9-413e-97da-c5c5c8817e12
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_poster
+    - node.type.animated_series
+  module:
+    - image
+id: node.animated_series.field_poster
+field_name: field_poster
+entity_type: node
+bundle: animated_series
+label: Poster
+description: 'Poster of the Series'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: '10 MB'
+  max_resolution: 2000x2000
+  min_resolution: 500x500
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: 51e09554-25bc-4484-b664-08622fa5346f
+    alt: generic_poster
+    title: ''
+    width: 502
+    height: 582
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

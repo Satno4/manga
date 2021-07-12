@@ -1,0 +1,23 @@
+uuid: abce1095-5809-4eb5-8a92-f38100d4d28b
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.mangaka_answer
+    - field.field.comment.mangaka_answer.comment_body
+  module:
+    - text
+id: comment.mangaka_answer.default
+targetEntityType: comment
+bundle: mangaka_answer
+mode: default
+content:
+  comment_body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  links: true

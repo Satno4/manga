@@ -1,0 +1,18 @@
+uuid: d1575b08-11d8-48d7-9075-4cdd70526bf5
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.voice_actor
+id: node.voice_actor.title
+field_name: title
+entity_type: node
+bundle: voice_actor
+label: 'Unique Name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

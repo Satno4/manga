@@ -1,0 +1,18 @@
+uuid: e6d09d6e-94f3-4080-b702-a674cad87925
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.mangaka
+id: node.mangaka.title
+field_name: title
+entity_type: node
+bundle: mangaka
+label: 'Unique Name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

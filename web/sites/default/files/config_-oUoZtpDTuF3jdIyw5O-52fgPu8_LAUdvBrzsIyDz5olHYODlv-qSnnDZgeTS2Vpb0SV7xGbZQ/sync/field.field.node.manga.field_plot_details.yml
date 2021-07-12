@@ -1,0 +1,21 @@
+uuid: 72ad2bfc-ad1b-4b36-8807-144001f676b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_plot_details
+    - node.type.manga
+  module:
+    - text
+id: node.manga.field_plot_details
+field_name: field_plot_details
+entity_type: node
+bundle: manga
+label: 'Plot Details'
+description: 'What is the manga about'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

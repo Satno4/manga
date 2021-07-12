@@ -1,0 +1,21 @@
+uuid: 7db20c33-1d30-4de5-aa39-075feb4e3ae7
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.mangaka_answer
+    - field.storage.comment.comment_body
+  module:
+    - text
+id: comment.mangaka_answer.comment_body
+field_name: comment_body
+entity_type: comment
+bundle: mangaka_answer
+label: Comment
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

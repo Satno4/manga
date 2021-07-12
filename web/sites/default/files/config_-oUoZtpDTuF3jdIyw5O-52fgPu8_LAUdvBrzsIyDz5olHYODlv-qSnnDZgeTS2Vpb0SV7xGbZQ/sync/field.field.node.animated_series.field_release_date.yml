@@ -1,0 +1,21 @@
+uuid: 268afc50-8f6c-43bb-9cdc-c34f7f3992f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_release_date
+    - node.type.animated_series
+  module:
+    - datetime
+id: node.animated_series.field_release_date
+field_name: field_release_date
+entity_type: node
+bundle: animated_series
+label: 'Release Date'
+description: 'When was the first episode released'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

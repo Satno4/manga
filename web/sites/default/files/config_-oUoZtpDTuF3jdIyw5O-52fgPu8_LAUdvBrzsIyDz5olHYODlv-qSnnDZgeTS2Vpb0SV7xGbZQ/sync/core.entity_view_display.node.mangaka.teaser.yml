@@ -1,0 +1,35 @@
+uuid: 54c9ef2d-925d-4bd5-bca6-40a6fcb5a080
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.mangaka.field_answer
+    - field.field.node.mangaka.field_biography
+    - field.field.node.mangaka.field_birthday
+    - field.field.node.mangaka.field_poster
+    - field.field.node.mangaka.field_published_mangas
+    - node.type.mangaka
+  module:
+    - image
+    - user
+id: node.mangaka.teaser
+targetEntityType: node
+bundle: mangaka
+mode: teaser
+content:
+  field_poster:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: content
+    third_party_settings: {  }
+hidden:
+  field_answer: true
+  field_biography: true
+  field_birthday: true
+  field_published_mangas: true
+  links: true

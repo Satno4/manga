@@ -1,0 +1,23 @@
+uuid: bc8b97c6-79f9-4346-b3ee-bdb77099d8cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_number_of_issues
+    - node.type.manga
+id: node.manga.field_number_of_issues
+field_name: field_number_of_issues
+entity_type: node
+bundle: manga
+label: 'Number of Issues'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

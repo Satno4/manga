@@ -1,0 +1,21 @@
+uuid: 183a2c2a-c86c-49a6-b655-9dd157a460e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_biography
+    - node.type.mangaka
+  module:
+    - text
+id: node.mangaka.field_biography
+field_name: field_biography
+entity_type: node
+bundle: mangaka
+label: Biography
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

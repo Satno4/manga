@@ -1,0 +1,31 @@
+uuid: 5babbd81-59d3-4ff1-8092-f0990f142972
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.publishing_house.body
+    - field.field.node.publishing_house.field_poster
+    - field.field.node.publishing_house.field_published_mangas
+    - node.type.publishing_house
+  module:
+    - image
+    - user
+id: node.publishing_house.teaser
+targetEntityType: node
+bundle: publishing_house
+mode: teaser
+content:
+  field_poster:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: content
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_published_mangas: true
+  links: true

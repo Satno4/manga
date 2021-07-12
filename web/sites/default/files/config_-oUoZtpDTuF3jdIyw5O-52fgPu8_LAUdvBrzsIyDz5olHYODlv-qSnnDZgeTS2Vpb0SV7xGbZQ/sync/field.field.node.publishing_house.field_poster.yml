@@ -1,0 +1,38 @@
+uuid: 662b96c3-9111-46ac-808e-509fea08c46d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_poster
+    - node.type.publishing_house
+  module:
+    - image
+id: node.publishing_house.field_poster
+field_name: field_poster
+entity_type: node
+bundle: publishing_house
+label: Logo
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: '10 MB'
+  max_resolution: ''
+  min_resolution: 400x400
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: 03a9d3d4-81b4-4946-b004-b7b51672a2bd
+    alt: logo_placeholder
+    title: ''
+    width: 225
+    height: 230
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

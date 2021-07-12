@@ -1,0 +1,18 @@
+uuid: 4028ddb6-fddc-4793-a6a7-c489cc587584
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Mangaka
+type: mangaka
+description: 'Info about the artist'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

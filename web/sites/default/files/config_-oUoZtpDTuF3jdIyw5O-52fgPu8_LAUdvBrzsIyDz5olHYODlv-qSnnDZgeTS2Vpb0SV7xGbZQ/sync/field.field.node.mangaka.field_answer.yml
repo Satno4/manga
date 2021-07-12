@@ -1,0 +1,33 @@
+uuid: 5fce08f9-ba33-43a9-9508-c7d476c14975
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_answer
+    - node.type.mangaka
+  module:
+    - comment
+id: node.mangaka.field_answer
+field_name: field_answer
+entity_type: node
+bundle: mangaka
+label: Answer
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    status: 2
+    cid: 0
+    last_comment_timestamp: 0
+    last_comment_name: null
+    last_comment_uid: 0
+    comment_count: 0
+default_value_callback: ''
+settings:
+  default_mode: 1
+  per_page: 50
+  form_location: true
+  anonymous: 0
+  preview: 1
+field_type: comment

@@ -1,0 +1,31 @@
+uuid: 7f169a8e-d847-4a60-8cce-2d417643111c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.character.body
+    - field.field.node.character.field_appears_in
+    - field.field.node.character.field_poster
+    - node.type.character
+  module:
+    - image
+    - user
+id: node.character.teaser
+targetEntityType: node
+bundle: character
+mode: teaser
+content:
+  field_poster:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_appears_in: true
+  links: true

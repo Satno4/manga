@@ -1,0 +1,38 @@
+uuid: 10cda36f-6e8e-4b79-9788-4d222b04c1ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_poster
+    - node.type.manga
+  module:
+    - image
+id: node.manga.field_poster
+field_name: field_poster
+entity_type: node
+bundle: manga
+label: Cover
+description: 'Cover of the Manga'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: '10 MB'
+  max_resolution: ''
+  min_resolution: 400x400
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: 599cb5ec-dadf-4e99-a904-f411b13258e5
+    alt: generic_cover
+    title: ''
+    width: 920
+    height: 1099
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

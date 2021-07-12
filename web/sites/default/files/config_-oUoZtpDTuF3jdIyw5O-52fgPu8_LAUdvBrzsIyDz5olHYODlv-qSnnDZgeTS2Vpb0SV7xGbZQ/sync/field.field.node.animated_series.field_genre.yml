@@ -1,0 +1,29 @@
+uuid: 8f88ed3e-5a8f-4ba2-b0e8-44128739b0f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_genre
+    - node.type.animated_series
+    - taxonomy.vocabulary.animated_adaptation_genres
+id: node.animated_series.field_genre
+field_name: field_genre
+entity_type: node
+bundle: animated_series
+label: Genre
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      animated_adaptation_genres: animated_adaptation_genres
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

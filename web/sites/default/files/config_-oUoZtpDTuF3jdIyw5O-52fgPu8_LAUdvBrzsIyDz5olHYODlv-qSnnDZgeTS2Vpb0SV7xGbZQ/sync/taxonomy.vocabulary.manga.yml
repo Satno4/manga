@@ -1,0 +1,8 @@
+uuid: d2c46756-9101-48e8-8e86-2ad10df772e7
+langcode: en
+status: true
+dependencies: {  }
+name: 'Manga Genres'
+vid: manga
+description: 'This Vocabulary contains all the genres'
+weight: 0

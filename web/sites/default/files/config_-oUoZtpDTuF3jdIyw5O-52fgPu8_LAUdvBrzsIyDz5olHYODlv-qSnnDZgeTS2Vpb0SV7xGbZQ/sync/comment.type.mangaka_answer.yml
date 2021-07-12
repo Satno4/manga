@@ -1,0 +1,8 @@
+uuid: 5928428f-bf79-4009-97c4-ea813452fd4a
+langcode: en
+status: true
+dependencies: {  }
+id: mangaka_answer
+label: 'Mangaka Answer'
+target_entity_type_id: block_content
+description: 'Highlighted answers in AMA''s'

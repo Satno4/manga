@@ -1,0 +1,38 @@
+uuid: 5e4cbe1b-7a9e-4a2c-8dec-ce46844510c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_poster
+    - node.type.director
+  module:
+    - image
+id: node.director.field_poster
+field_name: field_poster
+entity_type: node
+bundle: director
+label: Picture
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: '10 MB'
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: 21f21a67-cc0c-4509-a4f8-d345d8664b6a
+    alt: ''
+    title: ''
+    width: 920
+    height: 1099
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

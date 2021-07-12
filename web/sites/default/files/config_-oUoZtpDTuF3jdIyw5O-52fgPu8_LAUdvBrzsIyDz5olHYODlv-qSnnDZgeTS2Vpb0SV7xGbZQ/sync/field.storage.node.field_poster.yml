@@ -1,0 +1,30 @@
+uuid: 8cae6894-40db-4e4c-bc7e-7e8b474f9205
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - node
+id: node.field_poster
+field_name: field_poster
+entity_type: node
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: generic_poster
+    title: ''
+    width: 502
+    height: 582
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

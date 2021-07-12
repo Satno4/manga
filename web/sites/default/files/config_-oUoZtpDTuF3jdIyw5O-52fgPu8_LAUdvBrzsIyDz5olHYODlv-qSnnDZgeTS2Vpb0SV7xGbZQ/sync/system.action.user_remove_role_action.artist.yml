@@ -1,0 +1,14 @@
+uuid: 2d5d4f55-15e0-41eb-8767-0f2cdf311b72
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.artist
+  module:
+    - user
+id: user_remove_role_action.artist
+label: 'Remove the Artist role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: artist

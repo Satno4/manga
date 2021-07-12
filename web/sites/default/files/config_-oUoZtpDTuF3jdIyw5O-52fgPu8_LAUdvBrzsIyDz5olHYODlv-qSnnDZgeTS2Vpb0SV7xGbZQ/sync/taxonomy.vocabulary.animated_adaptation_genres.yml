@@ -1,0 +1,8 @@
+uuid: b2d9b637-a02a-465b-917b-8ce26abc5b2a
+langcode: en
+status: true
+dependencies: {  }
+name: 'Animated Adaptation Genres'
+vid: animated_adaptation_genres
+description: ''
+weight: 0

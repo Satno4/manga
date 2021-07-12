@@ -1,0 +1,18 @@
+uuid: a4e7982c-530a-4f9f-a6b2-5e2f9d1fb0d8
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Manga
+type: manga
+description: 'List all the info for a given Manga'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

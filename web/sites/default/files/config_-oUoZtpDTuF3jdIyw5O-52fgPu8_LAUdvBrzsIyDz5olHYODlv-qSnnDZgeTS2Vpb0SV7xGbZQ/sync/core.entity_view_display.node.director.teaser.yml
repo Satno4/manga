@@ -1,0 +1,31 @@
+uuid: 780f6798-7612-4bba-90be-ae7abbd0dcf7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.director.body
+    - field.field.node.director.field_poster
+    - field.field.node.director.field_works_directed
+    - node.type.director
+  module:
+    - image
+    - user
+id: node.director.teaser
+targetEntityType: node
+bundle: director
+mode: teaser
+content:
+  field_poster:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: content
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_works_directed: true
+  links: true

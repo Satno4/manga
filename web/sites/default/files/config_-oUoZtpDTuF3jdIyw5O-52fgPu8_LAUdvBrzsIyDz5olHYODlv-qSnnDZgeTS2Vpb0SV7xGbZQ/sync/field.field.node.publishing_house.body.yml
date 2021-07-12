@@ -1,0 +1,23 @@
+uuid: 6b804814-2b03-4002-aa75-e3dff2c46864
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.publishing_house
+  module:
+    - text
+id: node.publishing_house.body
+field_name: body
+entity_type: node
+bundle: publishing_house
+label: Overview
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

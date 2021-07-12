@@ -1,0 +1,39 @@
+uuid: 6173b42f-8cb2-4ac3-b42d-b26183ca3b9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.animated_series.body
+    - field.field.node.animated_series.field_comments
+    - field.field.node.animated_series.field_genre
+    - field.field.node.animated_series.field_poster
+    - field.field.node.animated_series.field_release_date
+    - field.field.node.animated_series.field_series_name
+    - field.field.node.animated_series.field_status
+    - node.type.animated_series
+  module:
+    - image
+    - user
+id: node.animated_series.teaser
+targetEntityType: node
+bundle: animated_series
+mode: teaser
+content:
+  field_poster:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: content
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_comments: true
+  field_genre: true
+  field_release_date: true
+  field_series_name: true
+  field_status: true
+  links: true

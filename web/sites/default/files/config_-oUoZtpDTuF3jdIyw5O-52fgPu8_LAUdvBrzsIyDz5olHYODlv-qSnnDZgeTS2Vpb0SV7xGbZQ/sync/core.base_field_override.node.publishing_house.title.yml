@@ -1,0 +1,18 @@
+uuid: c8e82f03-344d-4a83-973a-7cbe2333dca6
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.publishing_house
+id: node.publishing_house.title
+field_name: title
+entity_type: node
+bundle: publishing_house
+label: 'Unique Name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

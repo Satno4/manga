@@ -1,0 +1,29 @@
+uuid: 21b4c4cd-e7b2-4db5-9ce8-ac18a7e588d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_star
+    - node.type.manga
+  module:
+    - fivestar
+id: node.manga.field_star
+field_name: field_star
+entity_type: node
+bundle: manga
+label: Stars
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  stars: 5
+  allow_clear: false
+  allow_revote: true
+  allow_ownvote: true
+  rated_while: viewing
+  enable_voting_target: false
+  target_bridge_field: ''
+  target_fivestar_field: ''
+field_type: fivestar

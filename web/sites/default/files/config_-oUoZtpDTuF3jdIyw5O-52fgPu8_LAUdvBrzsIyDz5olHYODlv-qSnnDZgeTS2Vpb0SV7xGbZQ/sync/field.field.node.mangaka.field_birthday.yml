@@ -1,0 +1,21 @@
+uuid: f7e51bb0-240d-4f55-93d6-2384982a9953
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_birthday
+    - node.type.mangaka
+  module:
+    - datetime
+id: node.mangaka.field_birthday
+field_name: field_birthday
+entity_type: node
+bundle: mangaka
+label: Birthday
+description: 'When was this person born'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime
