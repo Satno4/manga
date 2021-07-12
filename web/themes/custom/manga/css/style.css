@@ -1,0 +1,216 @@
+.block-manga-branding{
+  text-align: center;
+  display: inline-block;
+  margin: 0 auto !important;
+}
+.site-logo {
+  height: 150px;
+  width: auto;
+}
+
+
+.region-header, .region-primary-menu, #header .layout-container, #header, .header, footer{
+  background-color: black !important;
+  background-image:none !important;
+  text-align: center !important;
+}
+
+.region-header {
+  margin-bottom: -50px;
+}
+
+.site-branding-text-div{
+  text-align: center;
+  font-size: 2.4rem;
+  position: relative;
+}
+.site-branding-text-cell {
+  display: inline-block !important;
+  position: relative;
+  top: -95px;
+  left: 25px;
+}
+
+/* 480px */
+
+.collab {
+  color: whitesmoke;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 24px;
+}
+
+.site-footer .layout-container {
+  position: relative;
+  top: -50px;
+}
+
+.site-footer__bottom {
+  border-top: none;
+  margin: none;
+}
+
+/* .block-search, #block-manga-tools, .region-sidebar-first{ 
+  background-color: black !important;
+  color: white !important;
+  border: none;
+}
+
+.sidebar h2 {
+  border: none !important;
+} */
+#block-manga-search {
+  display: inline-block;
+  text-align: center;
+  min-width: 80%;
+  margin: 15px auto;
+}
+#block-manga-search h2 {
+  margin-top: -30px;
+  color: whitesmoke;
+  font-size: 1.5rem;
+  position: relative;
+  left: -40px;
+}
+
+.region-secondary-menu {
+  margin-top: -50px;
+  position: relative;
+  bottom: -80px;
+  display: inline-block;
+  min-width: 40%;
+  margin: 0 auto;
+  left: -240px;
+}
+
+#edit-keys {
+  width: 80%;
+}
+
+#block-manga-main-menu, #block-manga-account-menu  {
+  display: inline-block !important;
+
+}
+#block-manga-account-menu li {
+  display: inline-block !important;
+}
+
+#block-manga-main-menu{ 
+  float: left;
+}
+
+#block-manga-account-menu {
+  float:right;
+}
+
+.main-menu-item a, .account-menu-item a{
+  padding: 20px 20px !important;
+  color: black !important;
+  font-size: 1.2rem !important;
+  margin: 4px !important;
+  border-radius: 4px !important;
+
+}
+
+#edit-keys {
+  border-radius: 6px;
+  padding: 8px;
+
+}
+
+.field__label, .field__item, .field {
+  text-align: center;
+  border-bottom: 1px solid gray;
+  /* margin: 0 auto; */
+}
+
+h1{
+  text-align: center;
+}
+
+.field--name-title{
+  letter-spacing: 0.5rem;
+  font-size: 2rem;
+}
+
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.field--type-image {
+  width: 100%;
+}
+
+.image-style-large {
+  border-radius: 25%;
+  border: 4px solid black;
+}
+
+.logo .image-style-large, .poster .image-style-large{
+  border: none !important;
+  border-radius: 0 !important;
+  margin: 15px auto;
+}
+.field--name-field-genre .field__items .field__item{
+  display: inline-block !important;
+}
+
+.all-works, .all-characters, .all-actors {
+  text-align: center;
+}
+
+.work-cell, .character-cell {
+  text-align: center;
+  display: inline-block;
+  margin: 15px;
+}
+
+.work-poster, .character-picture, .actor-picture{
+  width: 240px;
+}
+
+.character-picture, .actor-picture{
+  border-radius: 25%;
+  border: black solid 2px;
+  height: 320px;
+  object-fit: contain;
+}
+
+.whole-cell{
+  width: 100%;
+  margin: 4px;
+  text-align: start;
+  position: relative;
+
+}
+
+.actor-cell{
+  display: inline-block;
+}
+
+.voiced-characters {
+  justify-content: center;
+  margin: auto 0;
+
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.voiced-character-cell{
+  display: inline-block;
+  margin: 10px;
+
+}
+
+.voiced-character-picture {
+  width: 160px;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 25%;
+  border: black solid 2px;
+}

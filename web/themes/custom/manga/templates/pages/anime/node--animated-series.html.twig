@@ -1,0 +1,73 @@
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    'clearfix',
+  ]
+%}
+{{ attach_library('bartik/classy.node') }}
+<article{{ attributes.addClass(classes) }}>
+  <header>
+    {{ title_prefix }}
+      {% if label and not page %}
+      <h2{{ title_attributes.addClass('node__title') }}>
+        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+      </h2>
+    {% endif %}
+    {{ title_suffix }}
+    {% if display_submitted %}
+      <div class="node__meta">
+        {{ author_picture }}
+        <span{{ author_attributes }}>
+          {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+        </span>
+        {{ metadata }}
+      </div>
+    {% endif %}
+  </header>
+  <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
+    {{ content.links }}
+    {{ content.field_series_name }}
+    {{ content.field_poster }}
+    {{ content.field_manga }}
+    {{ content.field_release_date }}
+    {{ content.field_status }}
+    {{ content.field_genre }}
+    {{ content.body }}
+
+    {% if voice_actors_and_characters|length > 0 %}
+      <h1>Voice actors with respective characters:</h1>
+      <div class='all-actors'>
+        {% for actor in voice_actors_and_characters %}
+          <div class="whole-cell">
+            <div class="actor-cell">
+              <h1>
+                <a href={{ actor['#voice_actor_link'] }}>{{ actor['#voice_actor_name'] }}</a>
+              </h1>
+              <img class="actor-picture" src={{ actor['#voice_actor_picture'] }} />
+            </div>
+            {% if actor['#voiced_characters_info']|length > 0 %}
+              <div class='voiced-characters'>
+                {% for character in actor['#voiced_characters_info']%}
+                  <div class='voiced-character-cell'>
+                    <h2>
+                    <a href={{ character['#character_link'] }}>{{ character['#character_name'] }}</a>
+                  </h2>
+                  <img class="voiced-character-picture" src={{ character['#character_picture'] }} />
+                  </div>
+
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {{ content.field_comments }}
+  </div>
+</article>

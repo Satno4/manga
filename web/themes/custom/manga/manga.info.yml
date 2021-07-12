@@ -1,11 +1,11 @@
-name: anime
+name: manga
 type: theme
-description: theme of our project
+description: 'theme of our project'
 core: 8.x
 core_version_requirement: ^8 || ^9
-base theme: bartik
 libraries:
-  - anime/global-styling
+  - manga/global-styling
+base theme: bartik
 regions:
   header: Header
   primary_menu: "Primary menu"
@@ -14,15 +14,20 @@ regions:
   page_bottom: "Page bottom"
   highlighted: Highlighted
   featured_top: "Featured top"
-  breadcrumb: Breadcrumb
+  # breadcrumb: Breadcrumb
   content: Content
   sidebar_first: "Sidebar first"
-  sidebar_second: "Sidebar second"
   featured_bottom_first: "Featured bottom first"
-  featured_bottom_second: "Featured bottom second"
-  featured_bottom_third: "Featured bottom third"
-  footer_first: "Footer first"
-  footer_second: "Footer second"
-  footer_third: "Footer third"
-  footer_fourth: "Footer fourth"
   footer_fifth: "Footer fifth"
+logo: ./logo.png
+libraries-override:
+  classy/base:
+    css:
+      component:
+        css/components/menu.css: css/style.css
+  bartik/base:
+    css:
+      component:
+        css/components/menu.css: css/style.css
+
+stylesheets-remove: core/*

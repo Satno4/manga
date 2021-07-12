@@ -1,0 +1,110 @@
+<?php
+
+function manga_preprocess_node(&$variables){
+
+    $entity_storage = \Drupal::entityTypeManager()->getStorage('node');
+
+    // dump($variables['node']->getType());
+
+    switch ($variables['node']->getType()) {
+        case 'mangaka':
+            $mangaka_id = $variables['node']->id();
+            $variables['works'] = [];
+            $manga_ids = $entity_storage->getQuery()->condition('type', 'manga')->condition('status','1')->condition('field_author', $mangaka_id)->execute();
+            $mangas = \Drupal\node\Entity\Node::loadMultiple($manga_ids);
+            foreach ($mangas as $manga){
+                $variables['works'][] = [
+                    '#work_title' => $manga->get('title')->getString(),
+                    '#work_poster' => file_create_url($manga->get('field_poster')->entity->getFileUri()),
+                    '#work_link' => $manga->toUrl()->toString()
+                ];
+            }
+            // dump($variables['works']);
+            break;
+        
+        case 'publishing_house':
+            $publishing_house_id = $variables['node']->id();
+            $variables['mangas'] = [];
+            $manga_ids = $entity_storage->getQuery()->condition('type', 'manga')->condition('status','1')->condition('field_publisher', $publishing_house_id)->execute();
+            $mangas = \Drupal\node\Entity\Node::loadMultiple($manga_ids);
+            foreach ($mangas as $manga){
+                $variables['mangas'][] = [
+                    '#manga_title' => $manga->get('title')->getString(),
+                    '#manga_poster' => file_create_url($manga->get('field_poster')->entity->getFileUri()),
+                    '#manga_link' => $manga->toUrl()->toString()
+                ];
+            }
+            // dump($variables['mangas']);
+            break;
+        
+        case 'character':
+            $character_id = $variables['node']->id();
+            $variables['other_characters'] = [];
+            $manga_id = $variables['node']->get('field_appears_in')->entity->id();
+            $all_characters_ids = $entity_storage->getQuery()->condition('type', 'character')->condition('status','1')->condition('field_appears_in', $manga_id)->execute();
+            $all_characters = \Drupal\node\Entity\Node::loadMultiple($all_characters_ids);
+            foreach ($all_characters as $character){
+                if($character_id != $character->id()){
+                    $variables['other_characters'][] = [
+                        '#character_name' => $character->get('title')->getString(),
+                        '#character_picture' => file_create_url($character->get('field_poster')->entity->getFileUri()),
+                        '#character_link' => $character->toUrl()->toString()
+                    ];
+                }
+            }
+            // dump($variables['other_characters']);
+            break;
+        
+        case 'manga':
+            $manga_id = $variables['node']->id();
+            $variables['characters'] = [];
+            $all_characters_ids = $entity_storage->getQuery()->condition('type', 'character')->condition('status','1')->condition('field_appears_in', $manga_id)->execute();
+            $all_characters = \Drupal\node\Entity\Node::loadMultiple($all_characters_ids);
+            foreach ($all_characters as $character){
+                $variables['characters'][] = [
+                    '#character_name' => $character->get('title')->getString(),
+                    '#character_picture' => file_create_url($character->get('field_poster')->entity->getFileUri()),
+                    '#character_link' => $character->toUrl()->toString()
+                ];
+            }
+            // dump($variables['characters']);
+            break;       
+        
+        case 'voice_actor':
+            $voice_actor_id = $variables['node']->id();
+            $variables['characters'] = [];
+            $characters_voiced = $variables['node']->get('field_characters_voiced');
+            foreach ($characters_voiced as $character) {
+                $variables['characters'][] = [
+                    '#character_name' => $character->entity->get('title')->getString(),
+                    '#character_picture' => file_create_url($character->entity->get('field_poster')->entity->getFileUri()),
+                    '#character_link' => $character->entity->toUrl()->toString()
+                ];
+            }
+            // dump($variables['characters']);
+            break;
+
+        case 'animated_series':
+            $animated_series_id = $variables['node']->id();
+            $variables['voice_actors_and_characters'] = [];
+            $voice_actors = $variables['node']->get('field_voice_actors');
+            foreach ($voice_actors as $voice_actor) {
+                $characters_voiced = $voice_actor->entity->get('field_characters_voiced');
+                $characters_info = [];
+                foreach ($characters_voiced as $character){
+                    $characters_info[] = ['#character_name' => $character->entity->get('title')->getString(),
+                    '#character_picture' => file_create_url($character->entity->get('field_poster')->entity->getFileUri()),
+                    '#character_link' => $character->entity->toUrl()->toString()
+                    ];
+                }                
+                $variables['voice_actors_and_characters'][] = [
+                    '#voice_actor_name' => $voice_actor->entity->get('title')->getString(),
+                    '#voice_actor_picture' => file_create_url($voice_actor->entity->get('field_poster')->entity->getFileUri()),
+                    '#voice_actor_link' => $voice_actor->entity->toUrl()->toString(),
+                    '#voiced_characters_info' => $characters_info
+                ];
+            }
+            // dump($variables['voice_actors_and_characters']);
+            break;
+    }
+}

@@ -1,0 +1,15 @@
+{%
+  set classes = [
+    'region',
+    'region-' ~ region|clean_class,
+  ]
+%}
+<div class="collab">Brought to you by </br> <a href="https://www.github.com/sandrodro" class="myman">Sandrodro</a> and <a href="https://www.github.com/satno4" class="myman">Satno4</a>  </div>
+
+
+{% if content %}
+  <div{{ attributes.addClass(classes) }}>
+    {{ content }}
+  </div>
+{% endif %}
+
